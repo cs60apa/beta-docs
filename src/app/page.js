@@ -1,8 +1,8 @@
 "use client";
 import { useRef } from "react";
-import { BiSolidBookBookmark } from 'react-icons/bi';
-import { AiOutlineTwitter } from 'react-icons/ai';
-import { BsDiscord } from 'react-icons/bs';
+import { BiSolidBookBookmark } from "react-icons/bi";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { BsDiscord } from "react-icons/bs";
 
 export default function Home() {
   const section1Ref = useRef(null);
@@ -14,75 +14,83 @@ export default function Home() {
   };
   return (
     <main className="min-h-screen mx-auto px-4 md:px-8 bg-cover bg-center bg-no-repeat">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 justify-center md:ml-4 lg:ml-20">
-        <div className="grid grid-rows-3 gap-2 justify-start md:ml-4 lg:ml-20 md:mt-5 mb-2 h-40 md:h-60">
-          <h1 className="font-bold font-sans text-xl md:text-2xl lg:text-4xl">
-            The Modern Javascript Tutorial
-          </h1>
-          <p className="font-sans text-sm md:text-base lg:text-2xl pb-20 lg:mb-5 mr-2 md:mr-5 sm:mb-10 mb-10">
-            How its done now. From the basics to advanced topics with simple,
-            but detailed explanations.
-          </p>
-          <form className="flex flex-row sm:flex-row sm:items-center mt-12 md:mt-5 lg:mt-10">
-            <div className="sm:inline-block">
-              <input
-                type="search"
-                name="query"
-                placeholder="Search in the tutorial"
-                className="border-2 py-2 px-2 border-solid border-slate-500 w-60 lg:w-96"
-              ></input>
-            </div>
-            <button className="inline-block h-11 sm:mt-0 relative border-solid bg-[#448460] hover:bg-[#67b689] py-2 px-2">
-              Search
-            </button>
-          </form>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 content-end items-end md:ml-4 lg:ml-20">
+        <div className="grid grid-flow-row justify-start md:ml-4 lg:ml-20 md:mt-5 mb-2 h-40 lg:h-40 md:h-40">
+          <div className="">
+            <p className="font-bold font-sans text-xl md:text-2xl mb-5 lg:text-4xl select-text">
+              The Modern Javascript Tutorial
+            </p>
+            <p className="font-sans text-base md:text-xl lg:text-2xl mr-2 mb-5 md:mb-2 select-text">
+              How its done now. From the basics to advanced topics with simple,
+              but detailed explanations.
+            </p>
+            <form className="flex flex-row sm:flex-row sm:items-center md:mt-5">
+              <div className="sm:inline-block">
+                <input
+                  type="search"
+                  name="query"
+                  placeholder="Search in the tutorial"
+                  className="border py-2 px-2 rounded dark:border-[#35383F] dark:bg-[#232529] text-[#35383F] w-60 md:w-72 lg:w-96"
+                ></input>
+              </div>
+              <button className="inline-block h-11 sm:mt-0 relative border-none rounded bg-[#448460] hover:bg-[#67b689] text-[#232529] py-2 px-2">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="inline-block justify-end mt-16 md:mt-5 md:mr-20">
-          <div className="flex-end mb-4 md:mb-10 ml-20 md:mt-5">
+        <div className="inline-block justify-end mt-5 md:mt-5 md:mr-20 lg:h-40 md:h-40 cursor-text">
+          <div className="flex-end mb-4 md:mb-2 ml-20 md:ml-32 lg:ml-60 md:mt-2">
             Last Updated on June 21, 2023
           </div>
-          <div className="grid grid-cols-2 mr-2 ml-2 lg:ml-20 lg:mr-20">
+          <div className="grid grid-cols-2 mr-2 ml-4 md:ml-10 lg:ml-20 lg:mr-20 md:mt-8 lg:mt-5">
             <a
-              className="flex flex-row box-border md:box-content bg-slate-200 hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:px-2 mr-2 rounded justify-center align-center text-[#e3796a]"
+              className="flex flex-row box-border md:box-content bg-[#F7F4F3] hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:px-2 mr-2 rounded justify-center align-center text-[#e3796a]"
               href=""
             >
               <BiSolidBookBookmark size={25} />
-              <span className="mx-1 text-xs lg:text-lg">Buy EPUB/PDF</span>
+              <span className="mx-1 text-xs md:text-base lg:text-xl">
+                Buy EPUB/PDF
+              </span>
             </a>
             <a
-              className="flex flex-row box-border md:box-content bg-slate-200 hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:ml-1 md:px-10 rounded justify-center align-center text-[#e3796a]"
+              className="flex flex-row box-border md:box-content bg-[#F7F4F3] hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:ml-1 md:px-10 rounded justify-center align-center text-[#e3796a]"
               href=""
             >
-              <span className="mr-2 text-xs lg:text-lg">Share: </span>
+              <span className="mr-2 text-xs md:text-base lg:text-xl">
+                Share:{" "}
+              </span>
               <AiOutlineTwitter size={25} />
             </a>
           </div>
-          <div className="grid grid-cols-2 mr-2 ml-2 lg:ml-20 lg:mr-20">
+          <div className="grid grid-cols-2 mr-2 ml-4 md:ml-10 lg:ml-20 lg:mr-20">
             <a
-              className="flex flex-row box-border md:box-content bg-slate-200 hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:px-2 mr-2 mt-2 md:mr-2 rounded justify-center align-center text-[#e3796a]"
+              className="flex flex-row box-border md:box-content bg-[#F7F4F3] hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:px-2 mr-2 mt-2 md:mr-2 rounded justify-center align-center text-[#e3796a]"
               href=""
             >
-              <span className="md:ml-2 ml-2 text-xs lg:text-lg">Github </span>
+              <span className="md:ml-2 ml-2 text-xs md:text-base lg:text-xl">
+                Github{" "}
+              </span>
             </a>
             <a
-              className="flex flex-row box-border md:box-content bg-slate-200 hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:ml-1 md:px-10 mt-2 rounded justify-center align-center text-[#e3796a]"
+              className="flex flex-row box-border md:box-content bg-[#F7F4F3] hover:bg-slate-300 dark:bg-[#292c31] dark:hover:bg-zinc-700 py-2 px-1 md:ml-1 md:px-10 mt-2 rounded justify-center align-center text-[#e3796a]"
               href=""
             >
               <BsDiscord size={25} />
-              <span className="ml-2 md:ml-2 text-xs lg:text-lg">
+              <span className="ml-2 md:ml-2 text-xs md:text-base lg:text-xl">
                 Discord Chat{" "}
               </span>
             </a>
           </div>
         </div>
       </div>
-      <div className="flex flex-col mt-8 lg:mt-12">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-5 ml-0 md:ml-8 lg:ml-40">
+      <div className="flex flex-col mt-8 md:mt-20 lg:mt-24 cursor-text">
+        <h2 className="text-xl md:text-xl lg:text-3xl font-bold mb-4 md:mb-5 ml-0 md:ml-8 lg:ml-40 select-text">
           Table of Contents
         </h2>
       </div>
       <div className="ml-0 md:ml-8 lg:ml-20 md:mr-40">
-        <p className="font-sans text-sm md:text-base lg:text-2xl lg:ml-20 mb-2 md:mb-2">
+        <p className="font-sans text-sm md:text-base lg:text-2xl lg:ml-20 mb-2 md:mb-2 select-text">
           Main course contains 2 parts which cover JavaScript as a programming
           language and working with a browser. There are also additional series
           of thematic articles.
@@ -91,9 +99,9 @@ export default function Home() {
       <div className="block">
         <div className="block outline-0">
           <div className="inline-block md:ml-8 lg:mx-40 my-8 md:my-10 overflow-x-auto">
-            <nav className="sticky top-0 left-0 right-0 z-1 flex-nowrap border-b-2 border-slate-700 hover:border-[#e3796a] ">
+            <nav className="sticky top-0 left-0 right-0 z-1 flex-nowrap border-b-2 dark:border-slate-700 hover:border-[#e3796a] ">
               <div className="flex">
-                <button onClick={() => scrollToSection(section1Ref)}>
+              <button onClick={() => scrollToSection(section1Ref)}>
                   <a className="flex-shrink-0 md:shrink-0 hover:text-[#e3796a]">
                     <h1 className="inline-block text-sm lg:text-2xl">PART 1</h1>
                     <p className="text-xs lg:text-base">
@@ -102,8 +110,8 @@ export default function Home() {
                   </a>
                 </button>
                 <button onClick={() => scrollToSection(section2Ref)}>
-                  <a className="flex-shrink-0 md:shrink-0 space-x-10 lg:space-x-60 hover:text-[#e3796a]">
-                    <h1 className="inline-block ml-5 md:ml-16 lg:ml-40 text-sm lg:text-2xl">
+                  <a className="flex-shrink-0 md:shrink-0 space-x-10 md:space-x-40 lg:space-x-96 hover:text-[#e3796a]">
+                    <h1 className="inline-block ml-5 md:ml-16 lg:ml-80 text-sm lg:text-2xl">
                       PART 2
                     </h1>
                     <p className="text-xs lg:text-base">
@@ -112,8 +120,8 @@ export default function Home() {
                   </a>
                 </button>
                 <button onClick={() => scrollToSection(section3Ref)}>
-                  <a className="flex-shrink-0 md:shrink-0 space-x-10 lg:space-x-60 hover:text-[#e3796a]">
-                    <h1 className="inline-block ml-10 lg:ml-60 text-sm lg:text-2xl">
+                  <a className="flex-shrink-0 md:shrink-0 space-x-10 md:space-x-40 lg:space-x-96 hover:text-[#e3796a]">
+                    <h1 className="inline-block ml-10 md:ml-28 lg:ml-80 text-sm lg:text-2xl">
                       PART 3
                     </h1>
                     <h1 className="lg:ml-2 text-xs lg:text-base">
@@ -123,13 +131,13 @@ export default function Home() {
                 </button>
               </div>
             </nav>
-            <div ref={section1Ref} className="inline-block pt-4 md:pt-16">
+            <div ref={section1Ref} className="inline-block pt-4 md:pt-12">
               <section>
                 <div>
                   <h1 className="font-bold text-2xl lg:text-3xl">
                     The Javascript Language
                   </h1>
-                  <div className="pt-5 md:pt-10 font-sans lg:text-2xl">
+                  <div className="pt-5 md:pt-8 font-sans lg:text-2xl select-text">
                     <p>
                       Here we learn JavaScript, starting from scratch and go on
                       to advanced concepts like OOP.
@@ -1343,7 +1351,7 @@ export default function Home() {
                   <h1 className="font-bold text-2xl lg:text-3xl">
                     Browser: Document, Events, Interfaces
                   </h1>
-                  <div className="pt-5 md:pt-10 font-sans lg:text-2xl">
+                  <div className="pt-5 md:pt-10 font-sans lg:text-2xl select-text">
                     <p>
                       Learning how to manage the browser page: add elements,
                       manipulate their size and position, dynamically create
@@ -1783,7 +1791,7 @@ export default function Home() {
                   <h1 className="font-bold text-2xl lg:text-3xl">
                     Additional articles
                   </h1>
-                  <div className="pt-5 md:pt-10 font-sans lg:text-2xl">
+                  <div className="pt-5 md:pt-10 font-sans lg:text-2xl select-text">
                     <p>
                       List of extra topics that assume youve covered the first
                       two parts of tutorial. There is no clear hierarchy here,
