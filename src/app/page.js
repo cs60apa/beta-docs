@@ -3,9 +3,11 @@ import { useRef } from "react";
 import { BiSolidBookBookmark } from "react-icons/bi";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BsDiscord } from "react-icons/bs";
-import Link from "next/link";
+import Links from "./components/Links";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
@@ -162,12 +164,12 @@ export default function Home() {
                         <li>
                           <div className="md:justify-start">
                             1.1
-                            <Link
-                              href="/intro/page"
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              An introduction to Javascript
-                            </Link>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/intro"
+                                text="An introduction to Javascript"
+                              />
+                            </span>
                           </div>
                         </li>
                         <li>
