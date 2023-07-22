@@ -3,8 +3,11 @@ import { useRef } from "react";
 import { BiSolidBookBookmark } from "react-icons/bi";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BsDiscord } from "react-icons/bs";
+import Links from "./components/Links";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
@@ -101,7 +104,7 @@ export default function Home() {
           <div className="inline-block md:ml-8 lg:mx-40 my-8 md:my-10 overflow-x-auto">
             <nav className="sticky top-0 left-0 right-0 z-1 flex-nowrap border-b-2 dark:border-slate-700 hover:border-[#e3796a] ">
               <div className="flex">
-              <button onClick={() => scrollToSection(section1Ref)}>
+                <button onClick={() => scrollToSection(section1Ref)}>
                   <a className="flex-shrink-0 md:shrink-0 hover:text-[#e3796a]">
                     <h1 className="inline-block text-sm lg:text-2xl">PART 1</h1>
                     <p className="text-xs lg:text-base">
@@ -161,12 +164,12 @@ export default function Home() {
                         <li>
                           <div className="md:justify-start">
                             1.1
-                            <a
-                              href=""
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              An introduction to Javascript
-                            </a>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/intro"
+                                text="An introduction to Javascript"
+                              />
+                            </span>
                           </div>
                         </li>
                         <li>
