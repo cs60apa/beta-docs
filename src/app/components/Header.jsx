@@ -10,7 +10,7 @@ import { useTheme } from "next-themes";
 function Header() {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="relative mx-auto px-4 md:px-8 border-b-4 dark:border-[#35383F] mb-10 z-1 ">
+    <div className="relative mx-auto px-4 md:px-8 border-b-4 dark:border-[#35383F] z-1 ">
       <div className="flex-start md:ml-2">
         <p>
           <img
@@ -32,7 +32,7 @@ function Header() {
             className="md:mr-2"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === "dark" ? <CiLight size={20} /> : <CiDark size={20} />}
+          {theme === "dark" ? <CiLight size={20} /> : <CiDark size={20} />}
           </button>
         </div>
         <div>
