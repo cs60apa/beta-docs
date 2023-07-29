@@ -174,20 +174,19 @@ export default function Intro() {
             <BsMap size={18} />
           </p>
         </div>
-        <div className=" md:mt-60 lg:mt-80">
-          <p className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
-            {" "}
-            <IoIosArrowBack size={45} />
-          </p>
+        <div className="hidden md:flex md:mt-72 ">
+          <span className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
+            <a href="/getting-started">
+              <IoIosArrowBack size={45} />
+            </a>
+          </span>
         </div>
       </div>
       <article className="w-full min-w-0 max-w-6xl mt-2 md:mt-10 md:mx-10 pb-10 dark:text-[#E2E3E7]">
         <div className="md:grid md:grid-flow-col">
           <div className="flex md:mb-4 mb-2 cursor-pointer">
             <span className="text-[#868D9A] hover:text-[#e3796a] md:mr-2 mr-1">
-            <a
-                href="/"
-              >
+              <a href="/">
                 <IoHome />
               </a>
             </span>
@@ -203,7 +202,7 @@ export default function Intro() {
               <HiOutlineArrowNarrowRight />{" "}
             </span>
             <span className="text-[#84a0ef] md:text-sm md:mr-10 mr-1 hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]">
-              <Links url="" text="An introduction" />
+              <Links url="/getting-started" text="An introduction" />
             </span>
           </div>
           <div className="flex text-[#868D9A] md:mr-1 justify-end">
@@ -286,33 +285,31 @@ export default function Intro() {
               The browser has an embedded engine sometimes called a “JavaScript
               virtual machine”.
             </p>
-            <p>
-              Different engines have different “codenames”. For example:
-              <ul className="list-disc space-y-2 md:mt-3 mt-2 ml-4">
-                <li>
-                  <a
-                    href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)"
-                    className="text-[#84a0ef] hover:text-[#e3796a]"
-                  >
-                    V8{" "}
-                  </a>{" "}
-                  -- in Chrome, Opera and Edge.
-                </li>
-                <li>
-                  <a
-                    href="https://en.wikipedia.org/wiki/SpiderMonkey"
-                    className="text-[#84a0ef] hover:text-[#e3796a]"
-                  >
-                    SpiderMonkey
-                  </a>{" "}
-                  -- in Firefox.
-                </li>
-                <li>
-                  …There are other codenames like “Chakra” for IE,
-                  “JavaScriptCore”, “Nitro” and “SquirrelFish” for Safari, etc.
-                </li>
-              </ul>
-            </p>
+            <p>Different engines have different “codenames”. For example: </p>
+            <ul className="list-disc space-y-2 md:mt-3 mt-2 ml-4">
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)"
+                  className="text-[#84a0ef] hover:text-[#e3796a]"
+                >
+                  V8{" "}
+                </a>{" "}
+                -- in Chrome, Opera and Edge.
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/SpiderMonkey"
+                  className="text-[#84a0ef] hover:text-[#e3796a]"
+                >
+                  SpiderMonkey
+                </a>{" "}
+                -- in Firefox.
+              </li>
+              <li>
+                …There are other codenames like “Chakra” for IE,
+                “JavaScriptCore”, “Nitro” and “SquirrelFish” for Safari, etc.
+              </li>
+            </ul>
             <p>
               The terms above are good to remember because they are used in
               developer articles on the internet. We`ll use them too. For
@@ -327,18 +324,18 @@ export default function Intro() {
                 How do engines work?
               </p>
               <p className="md:mt-3 mt-2 mx-3 md:mx-5">
-                Engines are complicated. But the basics are easy.
-                <ul className="list-decimal md:mt-3 mt-2 mx-3 md:mx-5 space-y-2">
-                  <li>
-                    The engine (embedded if it`s a browser) reads (“parses”) the
-                    script.
-                  </li>
-                  <li>
-                    Then it converts (“compiles”) the script to machine code.
-                  </li>
-                  <li>And then the machine code runs, pretty fast.</li>
-                </ul>
+                Engines are complicated. But the basics are easy.{" "}
               </p>
+              <ul className="list-decimal md:mt-3 mt-2 mx-3 md:mx-5 space-y-2">
+                <li>
+                  The engine (embedded if it`s a browser) reads (“parses”) the
+                  script.
+                </li>
+                <li>
+                  Then it converts (“compiles”) the script to machine code.
+                </li>
+                <li>And then the machine code runs, pretty fast.</li>
+              </ul>
               <p className="md:my-3 my-2 mx-3 md:mx-5">
                 The engine applies optimizations at each step of the process. It
                 even watches the compiled script as it runs, analyzes the data
@@ -366,28 +363,26 @@ export default function Intro() {
               In-browser JavaScript can do everything related to webpage
               manipulation, interaction with the user, and the webserver.
             </p>
-            <p>
-              For instance, in-browser JavaScript is able to:
-              <ul className="list-disc space-y-2 md:mt-3 mt-2 ml-4">
-                <li>
-                  Add new HTML to the page, change the existing content, modify
-                  styles.
-                </li>
-                <li>
-                  React to user actions, run on mouse clicks, pointer movements,
-                  key presses.
-                </li>
-                <li>
-                  Send requests over the network to remote servers, download and
-                  upload files (so-called AJAX and COMET technologies).
-                </li>
-                <li>
-                  Get and set cookies, ask questions to the visitor, show
-                  messages.
-                </li>
-                <li>Remember the data on the client-side (“local storage”).</li>
-              </ul>
-            </p>
+            <p>For instance, in-browser JavaScript is able to: </p>
+            <ul className="list-disc space-y-2 md:mt-3 mt-2 ml-4">
+              <li>
+                Add new HTML to the page, change the existing content, modify
+                styles.
+              </li>
+              <li>
+                React to user actions, run on mouse clicks, pointer movements,
+                key presses.
+              </li>
+              <li>
+                Send requests over the network to remote servers, download and
+                upload files (so-called AJAX and COMET technologies).
+              </li>
+              <li>
+                Get and set cookies, ask questions to the visitor, show
+                messages.
+              </li>
+              <li>Remember the data on the client-side (“local storage”).</li>
+            </ul>
           </div>
           <div className="space-y-3 md:mt-5 mt-3">
             <a
@@ -401,61 +396,57 @@ export default function Intro() {
               user`s safety. The aim is to prevent an evil webpage from
               accessing private information or harming the user`s data.
             </p>
-            <p>
-              Examples of such restrictions include:
-              <ul className="list-disc space-y-2 md:mt-3 mt-2 ml-4">
-                <li className=" space-y-2">
-                  <p>
-                    JavaScript on a webpage may not read/write arbitrary files
-                    on the hard disk, copy them or execute programs. It has no
-                    direct access to OS functions.
-                  </p>
-                  <p>
-                    Modern browsers allow it to work with files, but the access
-                    is limited and only provided if the user does certain
-                    actions, like “dropping” a file into a browser window or
-                    selecting it via an
-                  </p>
-                  <p>
-                    There are ways to interact with the camera/microphone and
-                    other devices, but they require a user`s explicit
-                    permission. So a JavaScript-enabled page may not sneakily
-                    enable a web-camera, observe the surroundings and send the
-                    information to the NSA.
-                  </p>
-                </li>
-                <li className=" space-y-2">
-                  <p>
-                    Different tabs/windows generally do not know about each
-                    other. Sometimes they do, for example when one window uses
-                    JavaScript to open the other one. But even in this case,
-                    JavaScript from one page may not access the other page if
-                    they come from different sites (from a different domain,
-                    protocol or port).
-                  </p>
-                  <p>
-                    This is called the “Same Origin Policy”. To work around
-                    that, both pages must agree for data exchange and must
-                    contain special JavaScript code that handles it. We`ll cover
-                    that in the tutorial.
-                  </p>
-                  <p>
-                    This limitation is, again, for the user`s safety. A page
-                    from http://anysite.com which a user has opened must not be
-                    able to access another browser tab with the URL
-                    http://gmail.com, for example, and steal information from
-                    there.
-                  </p>
-                </li>
-                <li>
-                  JavaScript can easily communicate over the net to the server
-                  where the current page came from. But its ability to receive
-                  data from other sites/domains is crippled. Though possible, it
-                  requires explicit agreement (expressed in HTTP headers) from
-                  the remote side. Once again, that`s a safety limitation.
-                </li>
-              </ul>
-            </p>
+            <p>Examples of such restrictions include: </p>
+            <ul className="list-disc space-y-2 md:mt-3 mt-2 ml-4">
+              <li className=" space-y-2">
+                <p>
+                  JavaScript on a webpage may not read/write arbitrary files on
+                  the hard disk, copy them or execute programs. It has no direct
+                  access to OS functions.
+                </p>
+                <p>
+                  Modern browsers allow it to work with files, but the access is
+                  limited and only provided if the user does certain actions,
+                  like “dropping” a file into a browser window or selecting it
+                  via an
+                </p>
+                <p>
+                  There are ways to interact with the camera/microphone and
+                  other devices, but they require a user`s explicit permission.
+                  So a JavaScript-enabled page may not sneakily enable a
+                  web-camera, observe the surroundings and send the information
+                  to the NSA.
+                </p>
+              </li>
+              <li className=" space-y-2">
+                <p>
+                  Different tabs/windows generally do not know about each other.
+                  Sometimes they do, for example when one window uses JavaScript
+                  to open the other one. But even in this case, JavaScript from
+                  one page may not access the other page if they come from
+                  different sites (from a different domain, protocol or port).
+                </p>
+                <p>
+                  This is called the “Same Origin Policy”. To work around that,
+                  both pages must agree for data exchange and must contain
+                  special JavaScript code that handles it. We`ll cover that in
+                  the tutorial.
+                </p>
+                <p>
+                  This limitation is, again, for the user`s safety. A page from
+                  http://anysite.com which a user has opened must not be able to
+                  access another browser tab with the URL http://gmail.com, for
+                  example, and steal information from there.
+                </p>
+              </li>
+              <li>
+                JavaScript can easily communicate over the net to the server
+                where the current page came from. But its ability to receive
+                data from other sites/domains is crippled. Though possible, it
+                requires explicit agreement (expressed in HTTP headers) from the
+                remote side. Once again, that`s a safety limitation.
+              </li>
+            </ul>
             <p></p>
             <p>
               Such limitations do not exist if JavaScript is used outside of the
@@ -510,80 +501,78 @@ export default function Intro() {
               actually allowing developers to code in another language and
               auto-converting it “under the hood”.
             </p>
-            <p>
-              Examples of such languages:
-              <ul className="list-disc space-y-2 md:mt-3 my-2 ml-4 md:ml-8">
-                <li>
-                  {" "}
-                  <a
-                    href=""
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    CoffeeScript
-                  </a>{" "}
-                  is “syntactic sugar” for JavaScript. It introduces shorter
-                  syntax, allowing us to write clearer and more precise code.
-                  Usually, Ruby devs like it.
-                </li>
-                <li>
-                  {" "}
-                  <a
-                    href=""
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    TypeScript
-                  </a>{" "}
-                  is concentrated on adding “strict data typing” to simplify the
-                  development and support of complex systems. It is developed by
-                  Microsoft.
-                </li>
-                <li>
-                  {" "}
-                  <a
-                    href=""
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    Flow
-                  </a>{" "}
-                  also adds data typing, but in a different way. Developed by
-                  Facebook.
-                </li>
-                <li>
-                  {" "}
-                  <a
-                    href=""
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    Dart
-                  </a>{" "}
-                  is a standalone language that has its own engine that runs in
-                  non-browser environments (like mobile apps), but also can be
-                  transpiled to JavaScript. Developed by Google.
-                </li>
-                <li>
-                  {" "}
-                  <a
-                    href=""
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    Brython
-                  </a>{" "}
-                  is a Python transpiler to JavaScript that enables the writing
-                  of applications in pure Python without JavaScript.
-                </li>
-                <li>
-                  {" "}
-                  <a
-                    href=""
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    Kotlin
-                  </a>{" "}
-                  is a modern, concise and safe programming language that can
-                  target the browser or Node.
-                </li>
-              </ul>
-            </p>
+            <p>Examples of such languages: </p>
+            <ul className="list-disc space-y-2 md:mt-3 my-2 ml-4 md:ml-8">
+              <li>
+                {" "}
+                <a
+                  href=""
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  CoffeeScript
+                </a>{" "}
+                is “syntactic sugar” for JavaScript. It introduces shorter
+                syntax, allowing us to write clearer and more precise code.
+                Usually, Ruby devs like it.
+              </li>
+              <li>
+                {" "}
+                <a
+                  href=""
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  TypeScript
+                </a>{" "}
+                is concentrated on adding “strict data typing” to simplify the
+                development and support of complex systems. It is developed by
+                Microsoft.
+              </li>
+              <li>
+                {" "}
+                <a
+                  href=""
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  Flow
+                </a>{" "}
+                also adds data typing, but in a different way. Developed by
+                Facebook.
+              </li>
+              <li>
+                {" "}
+                <a
+                  href=""
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  Dart
+                </a>{" "}
+                is a standalone language that has its own engine that runs in
+                non-browser environments (like mobile apps), but also can be
+                transpiled to JavaScript. Developed by Google.
+              </li>
+              <li>
+                {" "}
+                <a
+                  href=""
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  Brython
+                </a>{" "}
+                is a Python transpiler to JavaScript that enables the writing of
+                applications in pure Python without JavaScript.
+              </li>
+              <li>
+                {" "}
+                <a
+                  href=""
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  Kotlin
+                </a>{" "}
+                is a modern, concise and safe programming language that can
+                target the browser or Node.
+              </li>
+            </ul>
             <p>
               There are more. Of course, even if we use one of these transpiled
               languages, we should also know JavaScript to really understand
@@ -612,11 +601,12 @@ export default function Intro() {
           </div>
         </div>
       </article>
-      <div className="hidden md:flex md:mr-6 md:mt-64 lg:mt-80">
-        <p className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
-          {" "}
-          <IoIosArrowForward size={45} />
-        </p>
+      <div className="hidden md:flex md:mt-5">
+        <span className="md:mt-72 text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
+          <a href="/manuals-specifications">
+            <IoIosArrowForward size={45} />
+          </a>
+        </span>
       </div>
     </div>
   );

@@ -122,9 +122,15 @@ export default function js() {
                 </h1>
                 <div>
                   <div className="relative">
-                  <div className="flex">
-                    <p className="md:ml-3 md:my-3 text-[#71BAF2] hover:text-[#2092EB]"> <BsTwitter size={28}/></p>
-                    <p className="md:ml-3 md:my-3 text-[#8C9CC2] hover:text-[#576EA4]"> <PiFacebookLogoFill size={28}/> </p>
+                    <div className="flex">
+                      <p className="md:ml-3 md:my-3 text-[#71BAF2] hover:text-[#2092EB]">
+                        {" "}
+                        <BsTwitter size={28} />
+                      </p>
+                      <p className="md:ml-3 md:my-3 text-[#8C9CC2] hover:text-[#576EA4]">
+                        {" "}
+                        <PiFacebookLogoFill size={28} />{" "}
+                      </p>
                     </div>
                     <ul className="last-of-type:mb-0 px-0.5 mb-8">
                       <li className="my-1.5">
@@ -162,11 +168,9 @@ export default function js() {
       <article className="w-full min-w-0 max-w-6xl mt-2 md:mt-10 md:mx-10 pb-10 dark:text-[#E2E3E7] ">
         <div className="flex md:mb-4 mb-2 cursor-pointer">
           <span className="text-[#868D9A] hover:text-[#e3796a]">
-          <a
-                href="/"
-              >
-                <IoHome />
-              </a>
+            <a href="/">
+              <IoHome />
+            </a>
           </span>
         </div>
         <div className="prose prose-vercel max-w-none select-text">
@@ -186,7 +190,7 @@ export default function js() {
               <li>
                 <div className="md:justify-start">
                   <span className="text-[#84a0ef] hover:text-[#e3796a] ml-3 hover:border-b hover:border-[#e3796a]">
-                    <Links url="" text="An introduction" />
+                    <Links url="/getting-started" text="An introduction" />
                   </span>
                 </div>
               </li>
@@ -286,10 +290,11 @@ export default function js() {
         </div>
       </article>
       <div className="hidden md:flex md:mr-6 md:mt-60 lg:mt-80">
-        <p className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
-          {" "}
-          <IoIosArrowForward size={45} />
-        </p>
+        <span className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
+          <a href="/getting-started">
+            <IoIosArrowForward size={45} />
+          </a>
+        </span>
       </div>
     </div>
   );

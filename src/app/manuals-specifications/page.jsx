@@ -105,8 +105,14 @@ export default function Manuals() {
                 <div>
                   <div className="relative">
                     <div className="flex">
-                    <p className="md:ml-3 md:my-3 text-[#71BAF2] hover:text-[#2092EB]"> <BsTwitter size={28}/></p>
-                    <p className="md:ml-3 md:my-3 text-[#8C9CC2] hover:text-[#576EA4]"> <PiFacebookLogoFill size={28}/> </p>
+                      <p className="md:ml-3 md:my-3 text-[#71BAF2] hover:text-[#2092EB]">
+                        {" "}
+                        <BsTwitter size={28} />
+                      </p>
+                      <p className="md:ml-3 md:my-3 text-[#8C9CC2] hover:text-[#576EA4]">
+                        {" "}
+                        <PiFacebookLogoFill size={28} />{" "}
+                      </p>
                     </div>
                     <ul className="last-of-type:mb-0 px-0.5 mb-8">
                       <li className="my-1.5">
@@ -140,20 +146,19 @@ export default function Manuals() {
             <BsMap size={18} />
           </p>
         </div>
-        <div className=" md:mt-60 lg:mt-80">
-          <p className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
-            {" "}
-            <IoIosArrowBack size={45} />
-          </p>
+        <div className="hidden md:flex md:mt-72 ">
+          <span className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
+            <a href="/intro">
+              <IoIosArrowBack size={45} />
+            </a>
+          </span>
         </div>
       </div>
       <article className="w-full min-w-0 max-w-6xl mt-2 md:mt-10 md:mx-10 pb-10 dark:text-[#E2E3E7]">
         <div className="md:grid md:grid-flow-col">
           <div className="flex md:mb-4 mb-2 cursor-pointer">
             <span className="text-[#868D9A] hover:text-[#e3796a] md:mr-2 mr-1">
-            <a
-                href="/"
-              >
+              <a href="/">
                 <IoHome />
               </a>
             </span>
@@ -169,7 +174,7 @@ export default function Manuals() {
               <HiOutlineArrowNarrowRight />{" "}
             </span>
             <span className="text-[#84a0ef] md:text-sm md:mr-10 mr-1 hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]">
-              <Links url="" text="An introduction" />
+              <Links url="/getting-started" text="An introduction" />
             </span>
           </div>
           <div className="flex text-[#868D9A] md:mr-1 justify-end">
@@ -282,36 +287,36 @@ export default function Manuals() {
               regularly.
             </p>
             <p>
-              To see their support among browser-based and other engines, see:
-              <ul className="list-disc space-y-3 md:mt-3 mt-2 ml-4">
-                <li>
-                  <a
-                    href="https://caniuse.com"
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    https://caniuse.com
-                  </a>{" "}
-                  -- per-feature tables of support, e.g. to see which engines
-                  support modern cryptography functions:{" "}
-                  <a
-                    href="https://caniuse.com/#feat=cryptography"
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    https://caniuse.com/#feat=cryptography.
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://kangax.github.io/compat-table"
-                    className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
-                  >
-                    https://kangax.github.io/compat-table
-                  </a>{" "}
-                  -- a table with language features and engines that support
-                  those or don`t support.
-                </li>
-              </ul>
+              To see their support among browser-based and other engines, see:{" "}
             </p>
+            <ul className="list-disc space-y-3 md:mt-3 mt-2 ml-4">
+              <li>
+                <a
+                  href="https://caniuse.com"
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  https://caniuse.com
+                </a>{" "}
+                -- per-feature tables of support, e.g. to see which engines
+                support modern cryptography functions:{" "}
+                <a
+                  href="https://caniuse.com/#feat=cryptography"
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  https://caniuse.com/#feat=cryptography.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://kangax.github.io/compat-table"
+                  className="text-[#84a0ef] hover:text-[#e3796a] hover:border-b hover:border-[#e3796a]"
+                >
+                  https://kangax.github.io/compat-table
+                </a>{" "}
+                -- a table with language features and engines that support those
+                or don`t support.
+              </li>
+            </ul>
             <p>
               All these resources are useful in real-life development, as they
               contain valuable information about language details, their
@@ -324,11 +329,12 @@ export default function Manuals() {
           </div>
         </div>
       </article>
-      <div className="hidden md:flex md:mr-6 md:mt-64 lg:mt-80">
-        <p className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
-          {" "}
-          <IoIosArrowForward size={45} />
-        </p>
+      <div className="hidden md:flex md:mr-6 md:mt-60 lg:mt-80">
+        <span className="text-[#868D9A] hover:rounded-l-lg dark:hover:bg-[#666666] hover:bg-[#F7F4F3] w-14 h-12">
+          <a href="/code-editors">
+            <IoIosArrowForward size={45} />
+          </a>
+        </span>
       </div>
     </div>
   );

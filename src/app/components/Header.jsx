@@ -3,8 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { IoIosPerson } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
-import { CiLight } from "react-icons/ci";
-import { CiDark } from "react-icons/ci";
+import { IoMdSunny, IoMdMoon } from "react-icons/io";
 import { useTheme } from "next-themes";
 
 function Header() {
@@ -32,7 +31,7 @@ function Header() {
             className="md:mr-2"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-          {theme === "dark" ? <CiLight size={20} /> : <CiDark size={20} />}
+          {theme === "dark" ? <IoMdSunny size={20} /> : <IoMdMoon size={20} />}
           </button>
         </div>
         <div>

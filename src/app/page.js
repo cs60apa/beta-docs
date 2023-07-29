@@ -188,23 +188,23 @@ export default function Home() {
                         <li>
                           <div className="">
                             1.3
-                            <a
-                              href=""
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              Code editors
-                            </a>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/code-editors"
+                                text="Code editors"
+                              />
+                            </span>
                           </div>
                         </li>
                         <li>
                           <div className="">
                             1.4
-                            <a
-                              href=""
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              Developer console
-                            </a>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/devtools"
+                                text="Developer console"
+                              />
+                            </span>
                           </div>
                         </li>
                       </div>
