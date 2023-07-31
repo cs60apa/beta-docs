@@ -102,7 +102,7 @@ export default function Home() {
       <div className="block">
         <div className="block outline-0">
           <div className="inline-block md:ml-8 lg:mx-40 my-8 md:my-10 overflow-x-auto">
-            <nav className="sticky top-0 left-0 right-0 z-1 flex-nowrap border-b-2 dark:border-slate-700 hover:border-[#e3796a] ">
+            <nav className="sticky top-0 left-0 right-0 z-1 flex-nowrap border-b-2 dark:border-slate-700 hover:border-[#e3796a]">
               <div className="flex">
                 <button onClick={() => scrollToSection(section1Ref)}>
                   <a className="flex-shrink-0 md:shrink-0 hover:text-[#e3796a]">
@@ -175,12 +175,12 @@ export default function Home() {
                         <li>
                           <div className="md:justify-start">
                             1.2
-                            <a
-                              href=""
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              Manuals and specifications
-                            </a>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/manuals-specifications"
+                                text="Manuals and Specifications"
+                              />
+                            </span>
                           </div>
                         </li>
                       </div>
@@ -188,23 +188,23 @@ export default function Home() {
                         <li>
                           <div className="">
                             1.3
-                            <a
-                              href=""
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              Code editors
-                            </a>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/code-editors"
+                                text="Code editors"
+                              />
+                            </span>
                           </div>
                         </li>
                         <li>
                           <div className="">
                             1.4
-                            <a
-                              href=""
-                              className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]"
-                            >
-                              Developer console
-                            </a>
+                            <span className="text-[#84a0ef] hover:text-[#e3796a] ml-5 hover:border-b hover:border-[#e3796a]">
+                              <Links
+                                url="/devtools"
+                                text="Developer console"
+                              />
+                            </span>
                           </div>
                         </li>
                       </div>
